@@ -6,75 +6,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
+      background: #f8f9fa;
+      color: #212529;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 20px;
+      line-height: 1.6;
     }
 
-    .box {
-      animation: fadeIn 1s ease-out;
+    .container {
+      max-width: 560px;
+      text-align: center;
+      animation: fadeInUp 0.6s ease-out;
     }
 
-    h1 {
+    .error-code {
       font-size: 120px;
-      color: #f87171;
-      font-weight: bold;
-      margin-bottom: 10px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+      line-height: 1;
     }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
+    .error-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #343a40;
     }
 
-    p {
+    .error-description {
       font-size: 18px;
-      color: #cbd5e1;
-      margin-bottom: 30px;
+      color: #6c757d;
+      margin-bottom: 32px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    a {
-      display: inline-block;
+    .action-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
       padding: 12px 24px;
-      background: #f87171;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
       border-radius: 8px;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      display: inline-block;
     }
 
-    a:hover {
-      background: #dc2626;
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      border: 2px solid #2563eb;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(37, 99, 235, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .error-image {
+      max-width: 300px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 72px; }
-      h2 { font-size: 24px; }
+      .error-code { font-size: 80px; }
+      .error-title { font-size: 24px; }
+      .error-description { font-size: 16px; }
+      .action-buttons { flex-direction: column; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>404</h1>
-    <h2>Không tìm thấy trang</h2>
-    <p>Đường dẫn bạn truy cập không tồn tại hoặc đã bị xóa.</p>
-    <a href="/">🔙 Về trang chủ</a>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Trang không tồn tại</h1>
+    <p class="error-description">
+      Nội dung bạn đang tìm kiếm có thể đã bị di chuyển hoặc không còn khả dụng.
+    </p>
+    <div class="action-buttons">
+      <a href="/" class="btn btn-primary">Về trang chủ</a>
+      <a href="/tin-tuc" class="btn btn-secondary">Xem tin mới nhất</a>
+    </div>
   </div>
 </body>
 </html>
