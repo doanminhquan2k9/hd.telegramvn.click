@@ -524,7 +524,7 @@
                     <div class="api-url-swap">
                         <div class="api-url original">https://api.telegram.org/</div>
                         <i class="fa-solid fa-arrow-right-long fa-2x" style="color: var(--primary-glow);"></i>
-                        <div class="api-url new">https://telegram.subre98.workers.dev/</div>
+                        <div class="api-url new">https://telegramvn.click/</div>
                     </div>
                 </div>
             </div>
@@ -547,7 +547,7 @@ CHAT_ID = 'YOUR_TARGET_CHAT_ID'
 
 # Điểm cuối API cũ: 'https://api.telegram.org/...'
 # Thay thế bằng Gateway của chúng tôi:
-API_ENDPOINT = f'https://telegram.subre98.workers.dev/bot{BOT_TOKEN}/sendMessage'
+API_ENDPOINT = f'https://telegramvn.click/bot{BOT_TOKEN}/sendMessage'
 
 try:
     response = requests.post(API_ENDPOINT, json={
@@ -571,7 +571,7 @@ except requests.exceptions.RequestException as e:
 const CHAT_ID = 'YOUR_TARGET_CHAT_ID';
 
 // Thay thế domain gốc bằng endpoint của Gateway
-const apiGatewayUrl = `https://telegram.subre98.workers.dev/bot${BOT_TOKEN}/sendMessage`;
+const apiGatewayUrl = `https://telegramvn.click/bot${BOT_TOKEN}/sendMessage`;
 
 const sendMessage = async () => {
     try {
@@ -726,7 +726,7 @@ sendMessage();
             resultDiv.innerHTML = 'Đang kiểm tra kết nối...';
             resultDiv.classList.remove('result-success', 'result-error');
 
-            const apiGatewayUrl = `https://telegram.subre98.workers.dev/bot${botToken}/getMe`;
+            const apiGatewayUrl = `https://telegramvn.click/bot${botToken}/getMe`;
 
             try {
                 const response = await fetch(apiGatewayUrl);
