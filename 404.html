@@ -2,85 +2,79 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>404 - Không Tìm Thấy Trang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <title>404 - Không tìm thấy trang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
-      background: linear-gradient(135deg, #1f2937, #4b5563);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #ffffff;
-      font-family: 'Nunito', sans-serif;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
-      animation: fadeIn 1s ease-in-out;
+    .box {
+      animation: fadeIn 1s ease-out;
     }
 
     h1 {
       font-size: 120px;
-      font-weight: 800;
       color: #f87171;
+      font-weight: bold;
       margin-bottom: 10px;
     }
 
     h2 {
       font-size: 32px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     p {
       font-size: 18px;
+      color: #cbd5e1;
       margin-bottom: 30px;
-      color: #e5e7eb;
     }
 
     a {
       display: inline-block;
-      background: #f87171;
-      color: white;
       padding: 12px 24px;
-      border-radius: 8px;
+      background: #f87171;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
+      border-radius: 8px;
       transition: background 0.3s ease;
     }
 
     a:hover {
-      background: #ef4444;
+      background: #dc2626;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 72px; }
+      h2 { font-size: 24px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="box">
     <h1>404</h1>
-    <h2>Oops! Không tìm thấy trang</h2>
-    <p>Trang bạn đang cố truy cập không tồn tại hoặc đã bị xóa.<br>Vui lòng kiểm tra lại đường dẫn hoặc quay về trang chủ.</p>
-    <a href="/">🔙 Quay về trang chủ</a>
+    <h2>Không tìm thấy trang</h2>
+    <p>Đường dẫn bạn truy cập không tồn tại hoặc đã bị xóa.</p>
+    <a href="/">🔙 Về trang chủ</a>
   </div>
 </body>
 </html>
